@@ -76,7 +76,10 @@ const Login = () => {
                     Login
                   </button>
                   <div className=" flex justify-center items-center mt-[14px] mb-[16px]">
+                    <div className="border-t border-gray-300 my-4"></div>
+
                     <p className="text-[#394455]">or authenticate with</p>
+                    <div className="border-t border-gray-300 my-4"></div>
                   </div>
                 </form>
                 <div className="flex flex-row gap-[22px]">
