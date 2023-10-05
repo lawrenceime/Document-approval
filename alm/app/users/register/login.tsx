@@ -3,15 +3,17 @@
 'use client'
 
 import React, { useState } from "react";
-import backgroundImage from "../../../public/images/alm_background.svg";
+import backgroundImage from "../../../public/images/bg-image-green.svg";
 import Navbar from "@/app/components/navbar";
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
+import {AiOutlineLoading3Quarters} from "react-icons/ai"
 
-const Newsignup = () => {
+const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+   const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div>
@@ -28,7 +30,7 @@ const Newsignup = () => {
               
                 <h3 className="pt-20 text-[14px] text-[400] font-Inter ml-[300px] ">
                   Don't have a VFD account?
-                  <a href="#" className="text-[#DD4F05] text-[600] ml-2">
+                  <a href="#" className="text-[#188E47] text-[600] ml-2">
                     Sign up
                   </a>
                 </h3>
@@ -65,10 +67,10 @@ const Newsignup = () => {
                     </button>
                   </div>
                   <div className="flex justify-end mt-[14px] mb-[14px]">
-                    <span className="text-[14px] text-[500] text-[#DD4F05]">Forgot password?</span>
+                    <span className="text-[14px] text-[500] text-[#188E47]">Forgot password?</span>
                   </div>
                   <button
-                    className="border bg-[#DD4F05] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
+                    className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
                     type="submit"
                   >
                     Login
@@ -84,7 +86,7 @@ const Newsignup = () => {
                   </div>
                   <div className=" border flex flex-row gap-[12px] items-center text-[14px] pr-[12px] py-[12px]  w-[178px] h-[43px] ">
                     <Image
-                      src="/images/microsoft_logo.svg" // Specify the path to your image within the 'public' directory
+                      src="/images/logos_microsoft-icon.svg" // Specify the path to your image within the 'public' directory
                       alt="Your Image"
                       width={24} // Set the desired width
                       height={24} // Set the desired height
@@ -107,4 +109,4 @@ const Newsignup = () => {
   );
 };
 
-export default Newsignup;
+export default Login;
