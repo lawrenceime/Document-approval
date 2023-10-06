@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import backgroundImage from "../../../public/images/bg-image-green.svg";
@@ -9,35 +9,42 @@ import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
-import {AiOutlineLoading3Quarters} from "react-icons/ai"
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-   const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div>
-      <div className="fixed w-full ">
+      <div className=" w-full ">
         <Navbar />
         <div />
 
         <div className="relative">
           <div
             className=" object-cover bg-no-repeat bg-right h-[931.684px] w-[1293.588px] absolute right-0 top-0"
-            style={{ backgroundImage: `url(${backgroundImage.src})`, backgroundSize: "cover" }}
+            style={{
+              backgroundImage: `url(${backgroundImage.src})`,
+              backgroundSize: "cover",
+            }}
           >
             <div className="ml-[250px]">
-              
-                <h3 className="pt-20 text-[14px] text-[400] font-Inter ml-[300px] ">
-                  Don't have a VFD account?
-                  <a href="#" className="text-[#188E47] text-[600] ml-2">
-                    Sign up
-                  </a>
-                </h3>
-            
+              <h3 className="pt-20 text-[14px] text-[400] font-Inter ml-[300px] ">
+                Don't have a VFD account?
+                <a href="#" className="text-[#188E47] text-[600] ml-2">
+                  Sign up
+                </a>
+              </h3>
+
               <div className=" border ml  mt-[27px] shadow-md  w-[545px] h-[617px] bg-white px-[84px]">
-                <h1 className="text-[28px] font-[700] mt-[56px] mb-[]">Log in</h1>
-                <p className="mb-[23px] text-[16px] text-[400] text-[#4B5563]"> Enter details below to login</p>
+                <h1 className="text-[28px] font-[700] mt-[56px] mb-[]">
+                  Log in
+                </h1>
+                <p className="mb-[23px] text-[16px] text-[400] text-[#4B5563]">
+                  {" "}
+                  Enter details below to login
+                </p>
                 <form>
                   <div className="mb-[14px]">
                     <input
@@ -67,7 +74,9 @@ const Login = () => {
                     </button>
                   </div>
                   <div className="flex justify-end mt-[14px] mb-[14px]">
-                    <span className="text-[14px] text-[500] text-[#188E47]">Forgot password?</span>
+                    <span className="text-[14px] text-[500] text-[#188E47]">
+                      Forgot password?
+                    </span>
                   </div>
                   <button
                     className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
@@ -100,8 +109,16 @@ const Login = () => {
                 </div>
                 <p className="mt-[47px]">
                   By creating an account, you agree to VFD e-sign{" "}
-                  <Link className="text-blue-500 items-center pl-[25px]" href={"#"}>Terms & Conditions</Link> and{" "}
-                  <Link className="text-blue-500" href={"#"}>Privacy Policy</Link>{" "}
+                  <Link
+                    className="text-blue-500 items-center pl-[25px]"
+                    href={"#"}
+                  >
+                    Terms & Conditions
+                  </Link>{" "}
+                  and{" "}
+                  <Link className="text-blue-500" href={"#"}>
+                    Privacy Policy
+                  </Link>{" "}
                 </p>
               </div>
             </div>
