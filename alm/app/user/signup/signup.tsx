@@ -194,13 +194,18 @@ const Signup = () => {
                       At least 6 characters: UPPER/lowercase and numbers{" "}
                     </p>
                   </div>
-
+                  
+                  <Link href="/target-page-url">
+                  <a>
                   <button
                     className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
                     type="submit"
                   >
                     Next
                   </button>
+                  </a>
+                  </Link>
+                 
                   <div className=" flex justify-center items-center mt-[14px] mb-[16px]">
                     <p className="text-[#394455]">or sign up with </p>
                   </div>
