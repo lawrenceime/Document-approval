@@ -195,15 +195,15 @@ const Signup = () => {
                     </p>
                   </div>
                   
-                  <Link href="/target-page-url">
-                  <a>
+                  <Link href="/authentication">
+                  
                   <button
                     className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
                     type="submit"
                   >
                     Next
                   </button>
-                  </a>
+                
                   </Link>
                  
                   <div className=" flex justify-center items-center mt-[14px] mb-[16px]">
