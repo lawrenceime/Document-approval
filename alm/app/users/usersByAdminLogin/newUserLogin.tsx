@@ -124,8 +124,12 @@ const NewUserLogin = () => {
               <p>Microsoft</p>
             </div>
           </div>
-          <p className="mt-[47px]">
-            By creating an account, you agree to VFD e-sign{" "}
+
+          <div className="ml-10">
+          <p className="mt-[47px] text-[13px] text-[#2C2A3B]">
+            By creating an account, you agree to VFD e-sign
+            </p>{" "}
+            <p className="text-[13px] text-[#2C2A3B]">
             <Link className="text-blue-500 items-center pl-[25px]" href={"#"}>
               Terms & Conditions
             </Link>{" "}
@@ -133,7 +137,11 @@ const NewUserLogin = () => {
             <Link className="text-blue-500" href={"#"}>
               Privacy Policy
             </Link>{" "}
-          </p>
+         
+            </p>
+          </div>
+          
+            
         </div>
       </div>
     </div>
