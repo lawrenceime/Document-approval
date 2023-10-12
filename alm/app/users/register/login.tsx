@@ -16,22 +16,22 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div>
+    <div className="bg-no-repeat bg-right"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+
+      width: "100%", // Add this to make the background cover the entire width
+      height: "100vh", // Add this to make the background cover the entire viewport height
+    }} >
       <div className=" w-full ">
         <Navbar />
         <div />
 
-        <div className="relative">
-          <div
-            className=" object-cover bg-no-repeat bg-right h-[931.684px] w-[1293.588px] absolute right-0 top-0"
-            style={{
-              backgroundImage: `url(${backgroundImage.src})`,
-              backgroundSize: "cover",
-            }}
-          >
-            <div className="ml-[250px]">
-              <h3 className="pt-20 text-[14px] text-[400] font-Inter ml-[300px] ">
-                Don't have a VFD account?
+       
+        
+            <div className="ml-[447px] pt-[100px] ">
+              <h3 className="pt-20 text-[14px] text-[#2C2A3B] text-[400] font-Inter ml-[300px] ">
+                Don't have a VFD e-sign account?
                 <a href="#" className="text-[#188E47] text-[600] ml-2">
                   Sign up
                 </a>
@@ -107,8 +107,9 @@ const Login = () => {
                     <p>Microsoft</p>
                   </div>
                 </div>
-                <p className="mt-[47px]">
+                <p className="mt-[47px] ml-10 text-[13px] text-[#2C2A3B]">
                   By creating an account, you agree to VFD e-sign{" "}
+                  <p className="text-[13px]">
                   <Link
                     className="text-blue-500 items-center pl-[25px]"
                     href={"#"}
@@ -119,11 +120,13 @@ const Login = () => {
                   <Link className="text-blue-500" href={"#"}>
                     Privacy Policy
                   </Link>{" "}
+                  </p>
+                  
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+         
+       
       </div>
     </div>
   );
