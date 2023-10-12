@@ -109,11 +109,7 @@ const ResetPass = () => {
                 </p>
               </div>
                   </div>
-                  <div className="flex justify-end mt-[14px] mb-[14px]">
-                    <span className="text-[14px] text-[500] text-[#188E47]">
-                      Forgot password?
-                    </span>
-                  </div>
+                 
                   <button
                     className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
                     type="submit"

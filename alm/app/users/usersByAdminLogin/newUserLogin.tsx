@@ -79,12 +79,16 @@ const NewUserLogin = () => {
                   At least 6 characters: UPPER/lowercase and numbers{" "}
                 </p>
               </div>
-            <button
+
+              <Link href="/users/usersByAdminAuth">
+              <button
               className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
               type="submit"
             >
-              Login
+              Next
             </button>
+              </Link>
+            
             <div className=" flex justify-center items-center mt-[14px] mb-[16px]">
               <div className="border-t border-gray-300 my-4"></div>
 

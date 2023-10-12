@@ -51,13 +51,15 @@ const ForgotPass = () => {
                   required
                 />
               </div>
-
+              <Link href= "/users/resetPassword">
               <button
                 className="border mt-[33px] bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
                 type="submit"
               >
                 Continue
               </button>
+              </Link>
+              
             </form>
             <div className="ml-10">
             <p className="mt-[201px] text-inter  font-normal text-[13px] text-[#2C2A3B]">
