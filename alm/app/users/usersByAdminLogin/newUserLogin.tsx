@@ -8,13 +8,21 @@ import Navbar from "@/app/components/navbar";
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
-import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash, FaRegEye, FaSpinner } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BiSolidLock } from "react-icons/bi";
+
 
 const NewUserLogin = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoading(true)
+    setTimeout(()=>{
+      setIsLoading(false)
+    }, 2000);
+  };
 
   return (
     <div
@@ -83,9 +91,13 @@ const NewUserLogin = () => {
               <Link href="/users/usersByAdminAuth">
               <button
               className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
-              type="submit"
+              type="submit" onClick={handleLogin}
             >
-              Next
+              {isLoading ? (
+                   <FaSpinner className="animate-spin mx-auto w-[23px] h-[23px] "/>
+                  ): (
+                    "Next"
+                  ) }
             </button>
               </Link>
             
