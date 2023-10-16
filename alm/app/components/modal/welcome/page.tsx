@@ -1,13 +1,10 @@
-import React from 'react';
-import Signup from './signup';
-
+import React from 'react'
+import Modal from './modal'
 
 const page = () => {
   return (
     <div>
-
-     <Signup/>
-   
+      <Modal/>
     </div>
   )
 }

@@ -18,7 +18,13 @@ const config: Config = {
         'custom': '0px 0px 1px 0px rgba(0, 0, 0, 0.40)',
         'custom2': '0px 6px 6px -6px rgba(0, 0, 0, 0.16)',
       },
-      
+      fontFamily:{
+        body:['Inter'],
+        wallpoet:['wallpoet'],
+        pacifico:['pacifico'],
+        robotomono:['robotomono']
+        
+      }
     },
   },
   plugins: [],
