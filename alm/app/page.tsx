@@ -1,9 +1,23 @@
+import React from 'react'
+import HomeNav from '../app/components/homeNav'
+
+// export default function Home() {
+//   return (
+//     <main>
+//       <Home/>
+//     </main>
+//   )
+// }
 
 
-export default function Home() {
+
+const page = () => {
   return (
-    <main>
-      
-    </main>
+    <div>
+      <HomeNav/>
+    </div>
   )
 }
+
+export default page
+

@@ -38,7 +38,7 @@ const Login = () => {
        
         
             <div className="ml-[447px] pt-[100px] ">
-              <h3 className="pt-20 text-[14px] text-[#2C2A3B] text-[400] font-Inter ml-[300px] ">
+              <h3 className="pt-20 text-[14px] text-[#2C2A3B] text-[400] font-Inter ml-[260px] ">
                 Don't have a VFD e-sign account?
                 <a href="#" className="text-[#188E47] text-[600] ml-2">
                   Sign up
