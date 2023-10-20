@@ -4,7 +4,7 @@
 
 import React, { useState } from "react";
 import backgroundImage from "../../../public/images/bg-image-green.svg";
-import Navbar from "@/app/components/navbar";
+import Navbar from "@/app/components/Navbar";
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
@@ -222,8 +222,8 @@ const Register = () => {
               </div>
 
               <div className="text-[13px] ml-10">
-              <p className=" mt-[20px]  text-[#2C2A3B] text-[13px] ">
-                By creating an account, you agree to VFD e-sign{" "}
+                <p className=" mt-[20px]  text-[#2C2A3B] text-[13px] ">
+                  By creating an account, you agree to VFD e-sign{" "}
                 </p>
                 <Link
                   className="text-blue-500 items-center pl-[25px] text-[13px]"
@@ -235,9 +235,9 @@ const Register = () => {
                 <Link className="text-blue-500 text-[13px]" href={"#"}>
                   Privacy Policy
                 </Link>{" "}
-            
+
               </div>
-              
+
             </div>
           </div>
         </div>

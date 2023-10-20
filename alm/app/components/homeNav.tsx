@@ -7,13 +7,13 @@ import Image from "next/image";
 const HomeNav = () => {
   const [activeLink, setActiveLink] = useState(null);
 
-  const handleLinkClick = (link:any) => {
+  const handleLinkClick = (link: any) => {
     setActiveLink(link);
   };
 
   return (
-    <nav className="w-full">
-      <div className="ml-[173px] flex ">
+    <nav className="w-full ">
+      <div className="lg:ml-[173px] flex ">
         <div>
           <Link href="/">
             <span className='items-center'
@@ -28,7 +28,7 @@ const HomeNav = () => {
           </Link>
         </div>
 
-        <div className=' flex flex-row space-x-[26px] items-center'>
+        <div className=' lg:flex lg:flex-row lg:space-x-[26px] lg:items-center'>
           <div className='ml-[104px]' >
             <Link href="/">
               <span className={`text-[#2C2A3B] ${activeLink === '/' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
@@ -39,9 +39,9 @@ const HomeNav = () => {
           </div>
 
           <div>
-            <Link href="/my-documents">
+            <Link href="/my_document">
               <span className={`text-[#2C2A3B] ${activeLink === '/my-documents' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
-                onClick={() => handleLinkClick('/my-documents')}>
+                onClick={() => handleLinkClick('/my_document')}>
                 My Documents
               </span>
             </Link>
@@ -57,27 +57,27 @@ const HomeNav = () => {
           </div>
 
           <div>
-            <Link href="/users">
+            <Link href="/user">
               <span className={`text-[#2C2A3B] ${activeLink === '/users' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
-                onClick={() => handleLinkClick('/users')}>
+                onClick={() => handleLinkClick('/user')}>
                 Users
               </span>
             </Link>
           </div>
 
           <div>
-            <Link href="/reports">
+            <Link href="/report">
               <span className={`text-[#2C2A3B] ${activeLink === '/reports' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
-                onClick={() => handleLinkClick('/reports')}>
+                onClick={() => handleLinkClick('/report')}>
                 Reports
               </span>
             </Link>
           </div>
 
           <div>
-            <Link href="/audit-trail">
+            <Link href="/audit">
               <span className={`text-[#2C2A3B] ${activeLink === '/audit-trail' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
-                onClick={() => handleLinkClick('/audit-trail')}>
+                onClick={() => handleLinkClick('/audit')}>
                 Audit Trail
               </span>
             </Link>
@@ -93,7 +93,7 @@ const HomeNav = () => {
           </div>
         </div>
 
-          
+
         <div className=" flex  mx-auto space-x-[10px] ">
           <Image
             src="/images/notification.svg"
@@ -112,7 +112,7 @@ const HomeNav = () => {
           />
         </div>
       </div>
-      <hr className='w-full'/>
+      <hr className='w-full' />
     </nav>
   );
 };
