@@ -4,7 +4,7 @@
 
 import React, { useState } from "react";
 import backgroundImage from "../../../public/images/bg-image-green.svg";
-import Navbar from "@/app/components/navbar";
+import Navbar from "@/app/components/Navbar";
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const NewUserLogin = () => {
 
   const handleLogin = () => {
     setIsLoading(true)
-    setTimeout(()=>{
+    setTimeout(() => {
       setIsLoading(false)
     }, 2000);
   };
@@ -75,32 +75,32 @@ const NewUserLogin = () => {
               </button>
             </div>
             <div className="flex flex-row mt-[9.5px]">
-                <BiSolidLock
-                  style={{
-                    width: "12px",
-                    height: "12px",
-                    color: "#AAAAAA",
-                  }}
-                />
-                <p className="mb-[32px] pl-[5px] text-[#AAAAAA] font-[400]   text-[12px]">
-                  {" "}
-                  At least 6 characters: UPPER/lowercase and numbers{" "}
-                </p>
-              </div>
+              <BiSolidLock
+                style={{
+                  width: "12px",
+                  height: "12px",
+                  color: "#AAAAAA",
+                }}
+              />
+              <p className="mb-[32px] pl-[5px] text-[#AAAAAA] font-[400]   text-[12px]">
+                {" "}
+                At least 6 characters: UPPER/lowercase and numbers{" "}
+              </p>
+            </div>
 
-              <Link href="/users/usersByAdminAuth">
+            <Link href="/users/usersByAdminAuth">
               <button
-              className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
-              type="submit" onClick={handleLogin}
-            >
-              {isLoading ? (
-                   <FaSpinner className="animate-spin mx-auto w-[23px] h-[23px] "/>
-                  ): (
-                    "Next"
-                  ) }
-            </button>
-              </Link>
-            
+                className="border bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
+                type="submit" onClick={handleLogin}
+              >
+                {isLoading ? (
+                  <FaSpinner className="animate-spin mx-auto w-[23px] h-[23px] " />
+                ) : (
+                  "Next"
+                )}
+              </button>
+            </Link>
+
             <div className=" flex justify-center items-center mt-[14px] mb-[16px]">
               <div className="border-t border-gray-300 my-4"></div>
 
@@ -126,22 +126,22 @@ const NewUserLogin = () => {
           </div>
 
           <div className="ml-10">
-          <p className="mt-[47px] text-[13px] text-[#2C2A3B]">
-            By creating an account, you agree to VFD e-sign
+            <p className="mt-[47px] text-[13px] text-[#2C2A3B]">
+              By creating an account, you agree to VFD e-sign
             </p>{" "}
             <p className="text-[13px] text-[#2C2A3B]">
-            <Link className="text-blue-500 items-center pl-[25px]" href={"#"}>
-              Terms & Conditions
-            </Link>{" "}
-            and{" "}
-            <Link className="text-blue-500" href={"#"}>
-              Privacy Policy
-            </Link>{" "}
-         
+              <Link className="text-blue-500 items-center pl-[25px]" href={"#"}>
+                Terms & Conditions
+              </Link>{" "}
+              and{" "}
+              <Link className="text-blue-500" href={"#"}>
+                Privacy Policy
+              </Link>{" "}
+
             </p>
           </div>
-          
-            
+
+
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
-
 import React from "react";
 import Image from 'next/image';
-
+  
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white z-10 p-4 flex items-center justify-between shadow-md">

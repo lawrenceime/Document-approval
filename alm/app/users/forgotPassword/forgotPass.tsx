@@ -4,7 +4,7 @@
 
 import React from "react";
 import backgroundImage from "../../../public/images/bg-image-green.svg";
-import Navbar from "@/app/components/navbar";
+import Navbar from "@/app/components/Navbar";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -51,33 +51,33 @@ const ForgotPass = () => {
                   required
                 />
               </div>
-              <Link href= "/users/resetPassword">
-              <button
-                className="border mt-[33px] bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
-                type="submit"
-              >
-                Continue
-              </button>
+              <Link href="/users/resetPassword">
+                <button
+                  className="border mt-[33px] bg-[#188E47] w-[378px] h-[43px] items-center py-[12px] rounded-[8px] text-white "
+                  type="submit"
+                >
+                  Continue
+                </button>
               </Link>
-              
+
             </form>
             <div className="ml-10">
-            <p className="mt-[201px] text-inter  font-normal text-[13px] text-[#2C2A3B]">
-              By creating an account, you agree to VFD e-sign{" "}
+              <p className="mt-[201px] text-inter  font-normal text-[13px] text-[#2C2A3B]">
+                By creating an account, you agree to VFD e-sign{" "}
               </p>
               <div className="text-[13px] text-[#2C2A3B] ">
-              <Link className="text-blue-500 items-center pl-[25px] text-[13px]" href={"#"}>
-                Terms & Conditions
-              </Link>{" "}
-              and{" "}
-              <Link className="text-blue-500 text-[13px]" href={"#"}>
-                Privacy Policy
-              </Link>{" "}
-           
+                <Link className="text-blue-500 items-center pl-[25px] text-[13px]" href={"#"}>
+                  Terms & Conditions
+                </Link>{" "}
+                and{" "}
+                <Link className="text-blue-500 text-[13px]" href={"#"}>
+                  Privacy Policy
+                </Link>{" "}
+
               </div>
             </div>
-            
-              
+
+
           </div>
         </div>
       </div>
