@@ -40,7 +40,7 @@ const HomeNav = () => {
 
           <div>
             <Link href="/my_document">
-              <span className={`text-[#2C2A3B] ${activeLink === '/my-documents' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+              <span className={`text-[#2C2A3B] ${activeLink === '/my_document' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
                 onClick={() => handleLinkClick('/my_document')}>
                 My Documents
               </span>
@@ -58,7 +58,7 @@ const HomeNav = () => {
 
           <div>
             <Link href="/user">
-              <span className={`text-[#2C2A3B] ${activeLink === '/users' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+              <span className={`text-[#2C2A3B] ${activeLink === '/user' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
                 onClick={() => handleLinkClick('/user')}>
                 Users
               </span>
@@ -67,7 +67,7 @@ const HomeNav = () => {
 
           <div>
             <Link href="/report">
-              <span className={`text-[#2C2A3B] ${activeLink === '/reports' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+              <span className={`text-[#2C2A3B] ${activeLink === '/report' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
                 onClick={() => handleLinkClick('/report')}>
                 Reports
               </span>
@@ -76,7 +76,7 @@ const HomeNav = () => {
 
           <div>
             <Link href="/audit">
-              <span className={`text-[#2C2A3B] ${activeLink === '/audit-trail' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+              <span className={`text-[#2C2A3B] ${activeLink === '/audit' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
                 onClick={() => handleLinkClick('/audit')}>
                 Audit Trail
               </span>
