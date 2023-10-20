@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import HomeNav from '../components/homeNav'
 
 const home = () => {
   return (
     <div>
+     
       <div className="flex flex-row w-[1094px] h-[183px] ml-[173px] gap-[24px] mt-[40px]">
         <div className="relative rounded-[8px] w-[535px] h-[183px] bg-[#666DB2] flex items-end justify-end">
           <div className="w-[340px] h-[126px] ml-[21px] my-[28px] ">

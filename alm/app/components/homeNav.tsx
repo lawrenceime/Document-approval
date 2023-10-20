@@ -1,67 +1,100 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Link from 'next/link';
 import Image from "next/image";
-import Home from '../dashboard/home'
-
-
 
 const HomeNav = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeLink, setActiveLink] = useState(null);
 
-  const handleTabChange = (index: number) => {
-    setActiveTab(index);
+  const handleLinkClick = (link:any) => {
+    setActiveLink(link);
   };
-  const tabs = [
-    { label: "Home", content: <Home/> },
-
-    { label: "My Documents", content: "content for 2" },
-
-    { label: "Template", content: "content for 3" },
-
-    { label: "Users", content: "content for 4" },
-
-    { label: "Reports", content: "content for 5" },
-
-    { label: "Audit Trail", content: "content for 6" },
-
-    { label: "Pricing", content: "content for 7" },
-  ];
-
-  if (activeTab < 0 || activeTab >= tabs.length) {
-    return null;
-  }
 
   return (
-    <div>
-      <div className=" flex flex-row w-full">
-        <div className="flex flex-row w-[767px] h-[66px] ml-[173px]">
-          <div className="flex items-center justify-center ">
-            <Image
-              src="/images/vfd_logo.png"
-              alt="Logo"
-              width={44}
-              height={46}
-            />
-          </div>
-          <div className="w-[619px] h-[66px] ml-[104px] space-x-[26px] text-[16px] font-body text-[#2C2A3B] flex items-center justify-center">
-            {tabs.map((tab, index) => (
-              <span
-                key={index}
-                className={
-                  index === activeTab
-                    ? "cursor-pointer font-bold text-green-500 underline "
-                    : "cursor-pointer"
-                }
-                onClick={() => handleTabChange(index)}
-              >
-                {tab.label}
+    <nav className="w-full">
+      <div className="ml-[173px] flex ">
+        <div>
+          <Link href="/">
+            <span className='items-center'
+              onClick={() => handleLinkClick('/')}>
+              <Image
+                src="/images/vfd_logo.png"
+                alt="Logo"
+                width={44}
+                height={46}
+              />
+            </span>
+          </Link>
+        </div>
+
+        <div className=' flex flex-row space-x-[26px] items-center'>
+          <div className='ml-[104px]' >
+            <Link href="/">
+              <span className={`text-[#2C2A3B] ${activeLink === '/' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/')}>
+                Home
               </span>
-            ))}
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/my-documents">
+              <span className={`text-[#2C2A3B] ${activeLink === '/my-documents' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/my-documents')}>
+                My Documents
+              </span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/template">
+              <span className={`text-[#2C2A3B] ${activeLink === '/template' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/template')}>
+                Template
+              </span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/users">
+              <span className={`text-[#2C2A3B] ${activeLink === '/users' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/users')}>
+                Users
+              </span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/reports">
+              <span className={`text-[#2C2A3B] ${activeLink === '/reports' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/reports')}>
+                Reports
+              </span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/audit-trail">
+              <span className={`text-[#2C2A3B] ${activeLink === '/audit-trail' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/audit-trail')}>
+                Audit Trail
+              </span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/pricing">
+              <span className={`text-[#2C2A3B] ${activeLink === '/pricing' ? 'text-green-800 underline underline-offset-[17px]' : ''}`}
+                onClick={() => handleLinkClick('/pricing')}>
+                Pricing
+              </span>
+            </Link>
           </div>
         </div>
 
-        <div className=" flex flex-row items-center justify-end  my-auto mx-auto">
+          
+        <div className=" flex  mx-auto space-x-[10px] ">
           <Image
             src="/images/notification.svg"
             alt="Logo"
@@ -79,9 +112,8 @@ const HomeNav = () => {
           />
         </div>
       </div>
-      <hr className="w-full" />
-      <div className="tab-content mt-6">{tabs[activeTab].content}</div>
-    </div>
+      <hr className='w-full'/>
+    </nav>
   );
 };
 
