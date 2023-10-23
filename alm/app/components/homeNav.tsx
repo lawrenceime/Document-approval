@@ -94,7 +94,7 @@ const HomeNav = () => {
         </div>
 
 
-        <div className=" flex  mx-auto space-x-[10px] ">
+        <div className=" flex  mx-auto space-x-[10px] shrink-0">
           <Image
             src="/images/notification.svg"
             alt="Logo"
