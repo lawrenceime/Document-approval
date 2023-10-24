@@ -1,11 +1,15 @@
-import React from 'react'
-
+"use client"
+import React,{useState} from "react";
+import { BiFilter, BiSearch, BiSort } from "react-icons/bi";
+import Tables from '../audit/Tables'
 const page = () => {
-    return (
-        <div>
-          <h1>hello people</h1>
-        </div>
-    )
-}
+  return (
+    <>
 
-export default page
+     
+          <Tables/>
+    </>
+  );
+};
+
+export default page;

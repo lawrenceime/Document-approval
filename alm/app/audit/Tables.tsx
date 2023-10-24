@@ -4,192 +4,162 @@ import { SlOptions } from "react-icons/sl";
 
 interface TableRow {
   name: string;
+  action: string; // Updated: Action Performed
+  ipAddress: string; // Updated: IP Address
+  timestamp: number; // Updated: Time Stamp
   email: string;
-  phone: string;
-  jobPosition: string;
-  role: string;
-  timestamp:number
 }
 
 const Tables: React.FC = () => {
   const [tableData, setTableData] = useState<TableRow[]>([
     {
-      name: "Ella Smith",
-      email: "ella@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Software Developer",
-      role: "Manager",
-      timestamp: new Date("2021-10-01").getTime(),
+      name: "Chidinma Nwankwo",
+      action: "Created a document",
+      ipAddress: "192.168.1.1",
+      timestamp: new Date("2023-01-15").getTime(),
+      email: "chidinma@example.com",
     },
     {
-      name: "Liam Johnson",
-      email: "liam@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Software Developer",
-      role: "Manager",
-      timestamp: new Date("2022-03-15").getTime(),
+      name: "Oluwafemi Adeboye",
+      action: "Created a user",
+      ipAddress: "192.168.1.2",
+      timestamp: new Date("2023-01-16").getTime(),
+      email: "oluwafemi@example.com",
     },
     {
-      name: "Olivia Brown",
-      email: "olivia@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Software Developer",
-      role: "Manager",
-      timestamp: new Date("2020-12-05").getTime(),
+      name: "Chukwuemeka Okafor",
+      action: "Login",
+      ipAddress: "192.168.1.3",
+      timestamp: new Date("2023-01-17").getTime(),
+      email: "chukwuemeka@example.com",
     },
     {
-      name: "Noah Wilson",
-      email: "noah@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Software Developer",
-      role: "Manager",
-      timestamp: new Date("2023-01-20").getTime(),
+      name: "Nneka Eze",
+      action: "Created a document",
+      ipAddress: "192.168.1.4",
+      timestamp: new Date("2023-02-05").getTime(),
+      email: "nneka@example.com",
     },
     {
-      name: "Ava Johnson",
-      email: "ava@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Software Developer",
-      role: "Manager",
-      timestamp: new Date("2022-09-10").getTime(),
+      name: "Abdul Suleiman",
+      action: "Login",
+      ipAddress: "192.168.1.5",
+      timestamp: new Date("2023-02-10").getTime(),
+      email: "abdul@example.com",
     },
     {
-      name: "Mia Davis",
-      email: "mia@example.com",
-      phone: "987-654-3210",
-      jobPosition: "UI Designer",
-      role: "Member",
-      timestamp: new Date("2021-11-30").getTime(),
+      name: "Chiamaka Okonkwo",
+      action: "Created a user",
+      ipAddress: "192.168.1.6",
+      timestamp: new Date("2023-02-18").getTime(),
+      email: "chiamaka@example.com",
     },
     {
-      name: "Lucas Anderson",
-      email: "lucas@example.com",
-      phone: "555-123-4567",
-      jobPosition: "Project Manager",
-      role: "Manager",
-      timestamp: new Date("2023-02-25").getTime(),
+      name: "Ezinne Ugwu",
+      action: "Login",
+      ipAddress: "192.168.1.7",
+      timestamp: new Date("2023-03-25").getTime(),
+      email: "ezinne@example.com",
     },
     {
-      name: "Sophia Miller",
-      email: "sophia@example.com",
-      phone: "111-222-3333",
-      jobPosition: "Software Engineer",
-      role: "Member",
-      timestamp: new Date("2020-05-18").getTime(),
+      name: "Olumide Ojo",
+      action: "Created a document",
+      ipAddress: "192.168.1.8",
+      timestamp: new Date("2023-04-01").getTime(),
+      email: "olumide@example.com",
     },
     {
-      name: "Emma White",
-      email: "emma@example.com",
-      phone: "555-555-5555",
-      jobPosition: "Product Manager",
-      role: "Manager",
-      timestamp: new Date("2022-11-10").getTime(),
+      name: "Ngozi Onyeka",
+      action: "Created a user",
+      ipAddress: "192.168.1.9",
+      timestamp: new Date("2023-04-10").getTime(),
+      email: "ngozi@example.com",
     },
     {
-      name: "William Davis",
-      email: "william@example.com",
-      phone: "111-111-1111",
-      jobPosition: "Web Developer",
-      role: "Member",
-      timestamp: new Date("2021-12-30").getTime(),
+      name: "Ikenna Anozie",
+      action: "Created a document",
+      ipAddress: "192.168.1.10",
+      timestamp: new Date("2023-05-05").getTime(),
+      email: "ikenna@example.com",
     },
     {
-      name: "Aiden Martin",
-      email: "aiden@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Front-end Developer",
-      role: "Member",
-      timestamp: new Date("2022-08-10").getTime(),
+      name: "Yusuf Ibrahim",
+      action: "Login",
+      ipAddress: "192.168.1.11",
+      timestamp: new Date("2023-05-15").getTime(),
+      email: "yusuf@example.com",
     },
     {
-      name: "Ella Harris",
-      email: "ella@example.com",
-      phone: "123-456-7890",
-      jobPosition: "UI/UX Designer",
-      role: "Member",
-      timestamp: new Date("2023-10-05").getTime(),
-    },
-    {
-      name: "Jackson Hall",
-      email: "jackson@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Software Engineer",
-      role: "Manager",
-      timestamp: new Date("2023-04-15").getTime(),
-    },
-    {
-      name: "Madison King",
-      email: "madison@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Product Manager",
-      role: "Manager",
-      timestamp: new Date("2023-10-20").getTime(),
-    },
-    {
-      name: "Liam Turner",
-      email: "liam@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Full-stack Developer",
-      role: "Member",
-      timestamp: new Date("2022-07-12").getTime(),
-    },
-    {
-      name: "Olivia Parker",
-      email: "olivia@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Graphic Designer",
-      role: "Member",
-      timestamp:  new Date("2023-10-19").getTime(),
-    },
-    {
-      name: "Noah Scott",
-      email: "noah@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Data Analyst",
-      role: "Manager",
-      timestamp: new Date("2023-03-01").getTime(),
-    },
-    {
-      name: "Isabella Lee",
-      email: "isabella@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Project Coordinator",
-      role: "Manager",
-      timestamp: new Date("2022-04-22").getTime(),
-    },
-    {
-      name: "James Baker",
-      email: "james@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Front-end Developer",
-      role: "Member",
-      timestamp: new Date("2022-12-14").getTime(),
-    },
-    {
-      name: "Charlotte Phillips",
-      email: "charlotte@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Database Administrator",
-      role: "Manager",
-      timestamp: new Date("2021-03-09").getTime(),
-    },
-    {
-      name: "Zharlotte Zhillips",
-      email: "charlotte@example.com",
-      phone: "123-456-7890",
-      jobPosition: "Database Administrator",
-      role: "Manager",
+      name: "Chinenye Okoro",
+      action: "Created a user",
+      ipAddress: "192.168.1.12",
       timestamp: new Date("2023-05-20").getTime(),
+      email: "chinenye@example.com",
+    },
+    {
+      name: "Nkemjika Eze",
+      action: "Login",
+      ipAddress: "192.168.1.13",
+      timestamp: new Date("2023-06-10").getTime(),
+      email: "nkemjika@example.com",
+    },
+    {
+      name: "Toluwalope Adebayo",
+      action: "Login",
+      ipAddress: "192.168.1.14",
+      timestamp: new Date("2023-06-15").getTime(),
+      email: "toluwalope@example.com",
+    },
+    {
+      name: "Chidimma Okafor",
+      action: "Created a document",
+      ipAddress: "192.168.1.15",
+      timestamp: new Date("2023-07-05").getTime(),
+      email: "chidimma@example.com",
+    },
+    {
+      name: "Amina Abubakar",
+      action: "Created a user",
+      ipAddress: "192.168.1.16",
+      timestamp: new Date("2023-07-15").getTime(),
+      email: "amina@example.com",
+    },
+    {
+      name: "Emeka Nnamani",
+      action: "Created a document",
+      ipAddress: "192.168.1.17",
+      timestamp: new Date("2023-08-05").getTime(),
+      email: "emeka@example.com",
+    },
+    {
+      name: "Lola Adebayo",
+      action: "Login",
+      ipAddress: "192.168.1.18",
+      timestamp: new Date("2023-08-10").getTime(),
+      email: "lola@example.com",
+    },
+    {
+      name: "Ibrahim Mohammed",
+      action: "Login",
+      ipAddress: "192.168.1.19",
+      timestamp: new Date("2023-09-10").getTime(),
+      email: "ibrahim@example.com",
+    },
+    {
+      name: "Chinyere Nwosu",
+      action: "Created a document",
+      ipAddress: "192.168.1.20",
+      timestamp: new Date("2023-09-20").getTime(),
+      email: "chinyere@example.com",
     },
   ]);
-  
 
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRows, setSelectedRows] = useState<Record<string, boolean>>({});
   const [sortType, setSortType] = useState<string | null>(null);
-  
+
   const toggleRowSelection = (name: string) => {
     setSelectedRows({
       ...selectedRows,
@@ -198,19 +168,18 @@ const Tables: React.FC = () => {
   };
 
   const sortTable = () => {
-    const sortedData = [...tableData];
+    const sorted = [...tableData]; // Create a new array for sorting
     if (sortType === "New-Old") {
-      sortedData.sort((a, b) => a.timestamp - b.timestamp);
+      sorted.sort((a, b) => a.timestamp - b.timestamp);
     } else if (sortType === "Old-New") {
-      sortedData.sort((a, b) => b.timestamp - a.timestamp);
-    } else if (sortType === "A-Z") {
-      sortedData.sort((a, b) => b.name.localeCompare(a.name));
-    } else if (sortType === "Z-A") {
-      sortedData.sort((a, b) => a.name.localeCompare(b.name));
+      sorted.sort((a, b) => b.timestamp - a.timestamp);
+    } else if (sortType === "Z-A" ){
+      sorted.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (sortType === "A-Z")  {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
     }
-    setTableData(sortedData);
+    setTableData(sorted); // Update tableData with the sorted data
   };
-  
   
 
   const nextPage = () => {
@@ -263,8 +232,9 @@ const Tables: React.FC = () => {
             <option value="" style={{ color: "#A0A3BD", fontSize: "16px" }}>
               All
             </option>
-            <option value="Manager">Manager</option>
-            <option value="Member">Member</option>
+            <option value="Created a document">Created a document</option>
+            <option value="Created a user">Created a user</option>
+            <option value="Login">Login</option>
           </select>
         </div>
         <div className="border flex justify-center items-center px-[16px]">
@@ -301,7 +271,9 @@ const Tables: React.FC = () => {
             <th className="text-left text-[#59595E] text-[14px] py-[16px]">
               Action
             </th>
-            <th className="text-left text-[#59595E] text-[14px]">IP Address</th>
+            <th className="text-left text-[#59595E] text-[14px]">
+              IP Address
+            </th>
             <th className="text-left text-[#59595E] text-[14px]">Timestamp</th>
             <th className="text-left text-[#59595E] text-[14px]">Email</th>
           </tr>
@@ -358,7 +330,6 @@ const Tables: React.FC = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
