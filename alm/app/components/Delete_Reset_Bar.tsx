@@ -2,9 +2,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Button from '../Button';
+import Button from './Button';
+import { useRouter } from 'next/navigation';
 
-export const CheckedDocument = () => {
+export const TrashBar = () => {
+    const router = useRouter()
     return (
         <div className='lg:w-full bg-[#666DB2] rounded-t-[8px] h-[67px] py-[16px] px-[24px] flex justify-between items-center mt-[41px] mb-[-40px]'>
             <div className='flex justify-start items-center gap-[16px]'>
@@ -14,6 +16,7 @@ export const CheckedDocument = () => {
                         alt=""
                         width={24}
                         height={24}
+                        onClick={() => router.push('/my_document')}
                     />
                 </div>
                 <div>

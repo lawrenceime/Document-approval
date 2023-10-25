@@ -1,7 +1,11 @@
+'use client'
+
 import React from 'react'
-import Card from './Card'
+import Card from '../components/Card'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 const CardList = () => {
+    const router = useRouter()
     return (
         <div className="lg:flex  lg:justify-betwwen  gap-[15px] mt-[41px]  lg:items-center ">
             <Card className='flex justify-between items-start bg-[#FAF8FF] border border-[#EAECF0] py-[15px] px-[16px] gap-[12px]'>
@@ -55,6 +59,8 @@ const CardList = () => {
                         alt="Logo"
                         width={24}
                         height={24}
+                        onClick={() => router.push('/my_document/trashed_documents')}
+                        className='cursor-pointer'
                     />
                 </div>
             </Card>

@@ -1,7 +1,7 @@
 
 'use client'
 import React from 'react'
-import { tableData } from "../table/Constant"
+import { tableData } from "./table/Constant"
 import { useState } from 'react'
 import Image from 'next/image'
 const TrashTable = () => {
