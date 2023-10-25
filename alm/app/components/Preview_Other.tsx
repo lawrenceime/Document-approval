@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import Proceed_button from './Proceed_button'
-const Preview = () => {
+
+const Preview_Other = () => {
     return (
         <div className='lg:grid lg:grid-cols-4 '>
             <div className=''>
@@ -74,7 +74,7 @@ const Preview = () => {
 
                     <div>
                         <Image
-                            src="/images/bx-chevron-right.svg"
+                            src="/images/bx-chevron-up.svg"
                             alt=""
                             width={24}
                             height={24}
@@ -156,11 +156,10 @@ const Preview = () => {
 
                     </div>
                 </div>
-                <Proceed_button className="bg-[#EBEBEB] lg:w-[230px] mt-[49px] mb-[16px]  text-[#C04C50]" text='Cancel document' />
-                <Proceed_button className=" lg:w-[230px]  text-[#FFF]" text=' Continue' />
+
             </div>
         </div>
     )
 }
 
-export default Preview
+export default Preview_Other

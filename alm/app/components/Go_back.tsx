@@ -2,8 +2,10 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const Go_back = () => {
+    const router = useRouter()
     return (
         <div className='flex justify-start items-center gap-[8px]'>
             <div>
@@ -12,6 +14,8 @@ const Go_back = () => {
                     alt=""
                     width={24}
                     height={24}
+                    onClick={() => router.push('/my_document')}
+                    className='cursor-pointer'
                 />
             </div>
             <div>
