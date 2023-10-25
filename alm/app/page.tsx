@@ -6,9 +6,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div>
-
-        <div className="lg:flex lg:flex-row lg:w-[1094px]  lg:h-[183px] lg:ml-[173px] gap-[24px] mt-[40px]">
+      <main className='md:mx-[173px]'>
+        <div className="lg:flex lg:flex-row lg:w-[1094px]  lg:h-[183px]  gap-[24px] mt-[40px]">
           <div className="relative rounded-[8px] lg:w-[535px] lg:h-[183px] bg-[#666DB2] lg:flex lg:items-end lg:justify-end">
             <div className="lg:w-[340px] lg:h-[126px] lg:ml-[21px] my-[28px] ">
               <div className="w-[238px] h-[34px] text-white font-body">
@@ -67,7 +66,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:flex lg:flex-row lg:w-[1094px] lg:h-[70px] lg:mx-auto lg:ml-[173px] lg:mt-[40px]">
+        <div className="lg:flex lg:flex-row lg:w-[1094px] lg:h-[70px] lg:mx-auto  lg:mt-[40px]">
           <div className="border flex flex-row w-[273.5px] h-[70px] items-center justify-center gap-[16px] bg-[#DADADA] ">
             <div className="w-[28px] h-[28px] ">
               <Image src="/images/pencil.svg" alt="Logo" width={28} height={28} />
@@ -127,7 +126,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="  border-dashed border-[5px] lg:w-[1094px] lg:h-[336px] lg:mt-[49px] lg:ml-[173px]">
+        <div className="  border-dashed border-[5px] lg:w-[1094px] lg:h-[336px] lg:mt-[49px] ">
           <div className="lg:w-[449px] lg:h-[266px] mx-auto my-[35px]">
             <div className="lg:w-[432px] lg:h-[137px] mx-auto">
               <div className="lg:w-[432px] lg:h-[56px] ">
@@ -205,13 +204,16 @@ export default function Home() {
 
         </div>
 
-        {/* <div className="w-[1440px] h-[1062px]">
+      </main>
+
+
+      {/* <div className="w-[1440px] h-[1062px]">
 
         </div> */}
 
 
 
-      </div>
+
     </>
   );
 }
