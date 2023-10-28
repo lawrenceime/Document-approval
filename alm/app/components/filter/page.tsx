@@ -2,7 +2,7 @@ import React from 'react'
 import Filter from './Filter'
 const page = () => {
   return (
-    <div><Filter/></div>
+    <div className='z-40'><Filter /></div>
   )
 }
 

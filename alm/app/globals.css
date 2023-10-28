@@ -12,3 +12,9 @@ body {
   padding: 1rem;
 
 }
+
+.gradient {
+  background: linear-gradient(90deg, #A54189 0%, #EE3A3E 52.34%, #F79431 115.51%, rgba(196, 196, 196, 0.00) 115.52%);
+
+
+}

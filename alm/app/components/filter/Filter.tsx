@@ -31,7 +31,7 @@ const Filter = () => {
                     />
                 </div>
             </div>
-            {showDropdown && <ul className='lg:w-[212px] py-[19px] px-[21px] rounded-[5px] shadow-md space-y-[16px]  bg-[#FFF]'>
+            {showDropdown && <ul className='lg:w-[212px] py-[19px] px-[21px] rounded-[5px] shadow-md space-y-[16px]  bg-[rgb(255,255,255)] z-40'>
                 {Options.map((option, index) => (<li key={index} onClick={() => {
                     setSelectOption(option)
                     setShowDropdown(false)
