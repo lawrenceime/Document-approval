@@ -22,7 +22,7 @@ const page = () => {
 
           <div className="flex flex-row justify-between text-[14px]  ">
             <p>Total Users</p>
-            <p>Managers</p>
+            <p>Managers</p>   
             <p>Members</p>
           </div>
         </div>

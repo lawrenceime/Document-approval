@@ -2,11 +2,10 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { BiChevronDown, BiDownload } from 'react-icons/bi'
-// import Link from 'next/link';
-// import { useRouter } from 'next/router';
 
 
-const page = () => {
+
+const users = () => {
 
   const [selected, setSelected] = useState<number | null>(null);
   const [showPopup, setShowPopup] = useState(false)
@@ -22,7 +21,7 @@ const page = () => {
   const handleCloseClick = () => {
     setShowPopup(false);
   };
-  // const router = useRouter();
+
 
   const documentMetrics = [
     { value: 100, label: "Total Document" },
@@ -48,8 +47,8 @@ const page = () => {
        className={`text-[16px] pb-6 ${
          selected === 0 ? ' border-b-2 border-green-500 text-green-500 ' : 'cursor-pointer'
        }`}
-       onClick={() => handleClick(0)}
        
+       onClick={() => handleClick(0)}
      >
        Your activity
      </p>
@@ -95,7 +94,8 @@ const page = () => {
        </div>
       </div>
      
-
+     
+      {/* Popup */}
       {showPopup && (
         <div className="fixed w-full top-0 right-0 bottom-0 bg-opacity-50 bg-gray-800 flex items-center justify-center z-[1000]">
    <div className="border-[5px] bg-white lg:w-[500px] lg:h-[350px] lg:mt-[49px] rounded-lg relative z-[1100]">
@@ -105,6 +105,7 @@ const page = () => {
             >
               x
             </button>
+            {/* ... (popup content) */}
            
           <div className="lg:w-[449px] lg:h-[266px] mx-auto my-[50px]">
           
@@ -210,7 +211,7 @@ const page = () => {
         
        <div className='pt-2'>
           <Image
-              src="/images/table.svg"
+              src="/images/users1.svg"
               alt="checked"
               width={1100}
               height={500}
@@ -221,7 +222,7 @@ const page = () => {
 
        <div className='mt-10'>
           <Image
-              src="/images/rate.svg"
+              src="/images/users2.svg"
               alt="checked"
               width={1200}
               height={500}
@@ -236,4 +237,4 @@ const page = () => {
   )
 }
 
-export default page
+export default users
